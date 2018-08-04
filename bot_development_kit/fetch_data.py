@@ -19,12 +19,24 @@ seconds = {
     '2m': 120,
     '3m': 180,
     '4m': 240,
-    '5m': 320,
+    '5m': 300,
     '10m': 600,
     '12m': 720,
     '13m': 780,
     '14m': 840,
-    '15m': 900
+    '15m': 900,
+    '20m': 1200,
+    '30m': 1800,
+    '40m': 2400,
+    '1h': 3600,
+    '2h': 7200,
+    '3h': 10800,
+    '4h': 14400,
+    '5h': 18000,
+    '6h': 21600,
+    '12h': 43200,
+    '1d': 86400,
+    '2d': 172800,
 }
 
 
@@ -63,7 +75,7 @@ class FetchData:
         self.run = False
         logger.info('Stoped fetching data')
 
-    def fetch_real_time(self, exchange, pair, ohlc_interval='1m', history_length=2, tick_interval=1, n=None):
+    def fetch_real_time(self, exchange, pair, ohlc_interval='1m', history_length=1, tick_interval=1, n=None):
 
         if tick_interval > seconds[ohlc_interval]:
             raise ValueError('Tick interval (' + str(tick_interval) +
@@ -120,11 +132,11 @@ class FetchData:
 
                     if len(ohlc_data_hist) >= history_length:
                         yield ohlc_interval_count, ohlc_data_hist[-history_length:]
+                        ohlc_interval_count += 1
                     else:
                         yield ohlc_interval_count, 'logging'
 
-                        tick_open = None
-                    ohlc_interval_count += 1
+                    tick_open = None
 
                 tick_interval_count += 1
                 if n is not None:

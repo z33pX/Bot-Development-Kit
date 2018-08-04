@@ -21,13 +21,15 @@ logger = logging.getLogger('Bot-Development-Kit')
 
 logger.info(
     """
-              _ _                 _
-        /\   | | |  Welcome  To  | |  The
-       /  \  | | |_ _ __ __ _  __| | ___
-      / /\ \ | | __| '__/ _` |/ _` |/ _ \ 
-     / ____ \| | |_| | | (_| | (_| |  __/
-    /_/    \_\_|\__|_|  \__,_|\__,_|\___| v 1.0
-    Bot Development Kit - z33pX
-       
+      ____        _      _____                _  ___ _   
+     |  _ \      | |    |  __ \   Welcome    | |/ (_) |  To The
+     | |_) | ___ | |_   | |  | | _____   __  | ' / _| |_ 
+     |  _ < / _ \| __|  | |  | |/ _ \ \ / /  |  < | | __|
+     | |_) | (_) | |_   | |__| |  __/\ V /   | . \| | |_ 
+     |____/ \___/ \__|  |_____/ \___| \_(_)  |_|\_\_|\__|
+      
+    Author: z33p1 - Daniel S.                                                               
+    GitHub: https://github.com/z33pX/Bot-Development-Kit
+    
     Great companies are built on great products - Elon Musk
     """)

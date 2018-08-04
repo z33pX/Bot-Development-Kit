@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # Run Ticker --------------------------------------------------------------
 
     try:
-        for i, data in fd.fetch_real_time('binance', 'ETH/BTC', ohlc_interval='5s', n=4):
+        for i, data in fd.fetch_real_time('binance', 'ETH/BTC', ohlc_interval='5s', n=5):
 
             print(i)
             print(data)
