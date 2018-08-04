@@ -1,33 +1,22 @@
-import mpl_finance_ext as mfe
-from exchange_APIs import Poloniex
-from backtest_datasets import BTC_XRP_5M
 import bot_development_kit as bdk
-import time
+import bot_development_kit.mpl_finance_ext as mfe
 
 
 if __name__ == "__main__":
+    fd = bdk.FetchData()
 
-    # Load the dataset for backtesting ----------------------------------------
-    dataset = BTC_XRP_5M()
-    dataset = dataset.load_btc_xrp_5min(tail=500)
+    # Load historical data for backtesting ------------------------------------
+    binance_ETH_BTC_5m = bdk.fetch_ohlc('binance', 'ETH/BTC', interval='5m')
+    mfe.plot_candlestick(data=binance_ETH_BTC_5m)
 
-    # Plot candlestick chart
-    # bdk.logger.info('Plot candlestick chart')
-    mfe.plot_candlestick(data=dataset)
-
-    # Run Poloniex Ticker -----------------------------------------------------
-
-    poloniex = Poloniex()
-    poloniex.start()
+    # Run Ticker --------------------------------------------------------------
 
     try:
-        pass
-        while True:
+        for i, data in fd.fetch_real_time('binance', 'ETH/BTC', ohlc_interval='5s', n=4):
 
-            print(poloniex('BTC_ETH'))
-            time.sleep(1)
+            print(i)
+            print(data)
 
     except KeyboardInterrupt:
         pass
 
-    poloniex.stop()

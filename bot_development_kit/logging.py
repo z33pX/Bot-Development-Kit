@@ -15,7 +15,7 @@ logging.basicConfig(
 coloredlogs.install(
     level='INFO',
     datefmt='%Y-%m-%d %I:%M:%S',
-    fmt='%(asctime)s %(msecs)03d |%(name)-15s|%(levelname)-8s|%(process)-1d| %(message)s')
+    fmt='%(asctime)s %(msecs)03d |%(name)-19s|%(levelname)-8s|%(process)-1d| %(message)s')
 
 logger = logging.getLogger('Bot-Development-Kit')
 
@@ -27,7 +27,7 @@ logger.info(
       / /\ \ | | __| '__/ _` |/ _` |/ _ \ 
      / ____ \| | |_| | | (_| | (_| |  __/
     /_/    \_\_|\__|_|  \__,_|\__,_|\___| v 1.0
-    Bot Development Kit - Daniel Schönbohm
-    
+    Bot Development Kit - z33pX
+       
     Great companies are built on great products - Elon Musk
     """)
