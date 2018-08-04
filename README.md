@@ -16,14 +16,15 @@ Install And Start Example
 -
 
 1) `git clone https://github.com/z33pX/Bot-Development-Kit.git`
-2) `cd Bot-Development-Kit.git`
-3) `./setup.sh`. It will do th efollowing:
+2) `cd Bot-Development-Kit`
+3) `./setup.sh` It will do the following:
     ```
     python3 -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
     ```
-4) `python main.py`
+4) `source venv/bin/activate`
+5) `python main.py`
 
 Which Exchanges And Markets Are Supportet?
 -
@@ -82,3 +83,11 @@ Arguments of the `fetch_real_time()` function:
 In that case you have to call the `stop()` function to stop the loop.
 
 To **stop** the loop you can set the `n` argument or call `fd.stop()`.
+
+Logging
+-
+If you want to log use
+```
+bdk.logger.info('I love logging stuff')
+```
+You can find the logfiles at `bot_development_kit/log_files`

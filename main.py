@@ -10,6 +10,7 @@ if __name__ == "__main__":
     mfe.plot_candlestick(data=binance_ETH_BTC_5m)
 
     # Run Ticker --------------------------------------------------------------
+    bdk.logger.info('I love logging stuff')
 
     try:
         for i, data in fd.fetch_real_time('binance', 'ETH/BTC', ohlc_interval='5s', n=5):

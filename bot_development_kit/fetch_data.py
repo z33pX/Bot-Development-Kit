@@ -68,7 +68,7 @@ class FetchData:
         index = str(len(self.cache_data))
         self.cache_data[index] = data
 
-        with open(file, 'w') as fp:
+        with open(file, 'w+') as fp:
             json.dump(self.cache_data, fp, indent=4)
 
     def stop(self):
