@@ -4,16 +4,17 @@ import os
 import datetime
 import time
 
-PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/'
 date_today = str(datetime.datetime.fromtimestamp(
     time.time()).strftime('%Y-%m-%d'))
 
+PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/'
+if not os.path.exists(PATH + '/log_files'):
+    os.makedirs(PATH + '/log_files')
+
+if not os.path.exists(PATH + '/cached_data'):
+    os.makedirs(PATH + '/cached_data')
+
 log_file_name =PATH + '/log_files/' + date_today + '.log'
-
-# When basicConfig looks for the log file and it isn't there it'll throw an exception
-file = open(log_file_name, 'w+')
-file.close()
-
 logging.basicConfig(filename=log_file_name, level='INFO')
 
 coloredlogs.install(
