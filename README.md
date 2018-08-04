@@ -12,9 +12,18 @@ The Bot Development Kit is a piece of software helping you to invent trading alg
      Great companies are built on great products - Elon Musk
 ```
 
-Install
+Install And Start Example
 -
 
+1) `git clone https://github.com/z33pX/Bot-Development-Kit.git`
+2) `cd Bot-Development-Kit.git`
+3) `./setup.sh`. It will do th efollowing:
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+4) `python main.py`
 
 Which Exchanges And Markets Are Supportet?
 -
@@ -48,7 +57,7 @@ For plotting the BDK is using the [**mpl_finance_ext**](https://github.com/z33pX
 import bot_development_kit.mpl_finance_ext as mfe
 mfe.plot_candlestick(data=binance_ETH_BTC_5m)
 ```
-result:
+Result:
 ![](https://github.com/z33pX/Bot-Development-Kit/blob/master/pic_01.png)
 
 The OHLC data Loop
