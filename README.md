@@ -23,7 +23,7 @@ Install And Start Example
     source venv/bin/activate
     pip install -r requirements.txt
     ```
-4) `source venv/bin/activate`
+4) `source venv/bin/activate` When you see the `(venv) ~/...` in your cli you don't have to do this
 5) `python main.py`
 
 Which Exchanges And Markets Are Supportet?

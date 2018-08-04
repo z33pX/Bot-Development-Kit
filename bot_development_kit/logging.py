@@ -8,9 +8,13 @@ PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/'
 date_today = str(datetime.datetime.fromtimestamp(
     time.time()).strftime('%Y-%m-%d'))
 
-logging.basicConfig(
-    filename=PATH + '/log_files/' + date_today + '.log',
-    level='INFO')
+log_file_name =PATH + '/log_files/' + date_today + '.log'
+
+# When basicConfig looks for the log file and it isn't there it'll throw an exception
+file = open(log_file_name, 'w+')
+file.close()
+
+logging.basicConfig(filename=log_file_name, level='INFO')
 
 coloredlogs.install(
     level='INFO',
