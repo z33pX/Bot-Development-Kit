@@ -1,5 +1,6 @@
 # Bot Development Kit
-The Bot Development Kit is a piece of software helping you to invent trading algorithms
+The Bot Development Kit is a piece of software helping you to invent trading algorithms.
+Currently it provides loading data for backtesting and a loop for testing on real time data.
 
 ```
       ____        _      _____                _  ___ _   
