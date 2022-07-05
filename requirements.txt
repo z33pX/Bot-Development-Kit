@@ -28,7 +28,7 @@ multidict==4.3.1
 numpy==1.15.0
 pandas==0.23.3
 parsimonious==0.8.0
-pycares==2.3.0
+pycares==4.2.0
 pycryptodome==3.6.4
 pyparsing==2.2.0
 python-dateutil==2.7.3
